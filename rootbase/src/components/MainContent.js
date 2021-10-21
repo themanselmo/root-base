@@ -1,14 +1,18 @@
 import React from "react"
 import PlantCard from "./PlantCard"
+import Nav from "./Nav"
 
-const MainContent = ({ currentUser }) => {
+const MainContent = ({ currentUser, onLogout }) => {
     return (
-        <div className = "main-content">
-            <h3>Welcome to your Rootbase {currentUser.name}!</h3>
-            {currentUser.plants.map(plant => {
-                return <PlantCard plant={plant}/>
-            })}
-        </div>
+        <>
+            <Nav onLogout={onLogout}/>
+            <div className = "main-content">
+                <h3>Welcome to your Rootbase {currentUser.name}!</h3>
+                {currentUser.plants.map(plant => {
+                    return <PlantCard plant={plant}/>
+                })}
+            </div>
+        </>
     )
 }
 

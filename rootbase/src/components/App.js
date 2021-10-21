@@ -26,6 +26,17 @@ function App() {
           setLoggedIn(!loggedIn)
         }
       })
+      .catch((error) => {
+        console.error("An Error Appeared!", error)
+        alert("An error has occured with the servers, please try again later.")
+      })
+  }
+
+  // when the user wants to log out, the state for the current user
+  //  and loggedIn are both changed to prepare the application for the next user
+  function handleLogout() {
+    setLoggedIn(false)
+    setCurrentUser({})
   }
 
   // checks fetched list of users from the db against the input provided 
@@ -43,8 +54,8 @@ function App() {
 
   return (
     <div className="App">
-      {loggedIn ? <MainContent currentUser={currentUser}/> : <LoginCard onLogin={handleLogin}/>}
-      
+      {loggedIn ? <MainContent currentUser={currentUser} onLogout={handleLogout}/> : 
+        <LoginCard onLogin={handleLogin}/>}
     </div>
   );
 }
