@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "username": "manselmo",
+            "name": "max",
+            "password": "password",
+            "plants": [
+                "Plant 1",
+                "Plant 2",
+                "Plant 3"
+            ]
+        },
+        {
+            "username": "richiebot",
+            "name": "richie",
+            "password": "password",
+            "plants": [
+                "Plant 1",
+                "Plant 2",
+                "Plant 3"
+            ]
+        },
+        {
+            "username": "vingintin",
+            "name": "victoria",
+            "password": "password",
+            "plants": [
+                "Plant 1",
+                "Plant 2",
+                "Plant 3"
+            ]
+        }
+    ]
+}
