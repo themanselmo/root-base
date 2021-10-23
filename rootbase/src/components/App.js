@@ -3,6 +3,7 @@ import { useState } from "react"
 
 import LoginCard from "./LoginCard"
 import MainContent from "./MainContent"
+import Header from "./Header"
 
 function App() {
   const [currentUser, setCurrentUser] = useState({})
@@ -16,7 +17,7 @@ function App() {
   function handleLogin(e, formData) {
     e.preventDefault()
     console.log('handle log in')
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:6001/users')
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -54,6 +55,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {loggedIn ? <MainContent currentUser={currentUser} onLogout={handleLogout}/> : 
         <LoginCard onLogin={handleLogin}/>}
     </div>
