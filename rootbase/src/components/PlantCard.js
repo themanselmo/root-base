@@ -1,4 +1,8 @@
 import { useState } from "react"
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
 
 const PlantCard = ({ plant: {plantName, dateGerminated, image, notes} }) => {
     const [displayDetails, setDisplayDetails] = useState(true)
@@ -37,6 +41,7 @@ const PlantCard = ({ plant: {plantName, dateGerminated, image, notes} }) => {
                 <button onClick={toggleDetailsOn}>Hide Note(s)</button>}
             {displayDetails ? <button>Delete</button> : <button>Add Note</button>}
         </li>
+
     )
 }
 

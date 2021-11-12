@@ -56,7 +56,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {loggedIn ? <MainContent currentUser={currentUser} onLogout={handleLogout}/> : 
+      {loggedIn ? 
+        <MainContent currentUser={currentUser} onLogout={handleLogout}/> 
+        : 
         <LoginCard onLogin={handleLogin}/>}
     </div>
   );
